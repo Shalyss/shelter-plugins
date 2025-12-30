@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Gemini Integration - Shelter Plugins
 
 A collection of Shelter plugins integrating Google's Gemini AI into Discord clients.
