@@ -33,7 +33,7 @@ var require_web = __commonJS({ "solid-js/web"(exports, module) {
 } });
 
 //#endregion
-//#region lib/api.js
+//#region plugins/gemini-summarize/lib/api.js
 let callCount = 0;
 let lastReset = Date.now();
 const getConfiguredDailyLimit = () => {
@@ -235,7 +235,7 @@ async function callGemini(prompt, opts = {}) {
 }
 
 //#endregion
-//#region lib/i18n.js
+//#region plugins/gemini-summarize/lib/i18n.js
 const translations = {
 	"en-US": {
 		"gemini.menu.title": "Gemini AI",
@@ -671,7 +671,7 @@ function formatDate(date) {
 }
 
 //#endregion
-//#region lib/summary.js
+//#region plugins/gemini-summarize/lib/summary.js
 function clamp(n, min, max) {
 	return Math.max(min, Math.min(max, n));
 }
@@ -957,7 +957,7 @@ async function summarizeLastX(x = 10) {
 }
 
 //#endregion
-//#region ui/Settings.jsx
+//#region plugins/gemini-summarize/ui/Settings.jsx
 var import_web$12 = __toESM(require_web(), 1);
 var import_web$13 = __toESM(require_web(), 1);
 var import_web$14 = __toESM(require_web(), 1);
@@ -1141,7 +1141,7 @@ var Settings_default = () => {
 };
 
 //#endregion
-//#region index.jsx
+//#region plugins/gemini-summarize/index.jsx
 var import_web = __toESM(require_web(), 1);
 var import_web$1 = __toESM(require_web(), 1);
 var import_web$2 = __toESM(require_web(), 1);
