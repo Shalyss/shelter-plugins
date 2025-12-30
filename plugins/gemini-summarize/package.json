@@ -1,0 +1,12 @@
+{
+    "name": "gemini-summarize",
+    "version": "1.0.0",
+    "description": "Gemini AI integration for Shelter",
+    "main": "index.jsx",
+    "type": "module",
+    "author": "Shalyss",
+    "scripts": {
+        "build": "lune build",
+        "dev": "lune dev"
+    }
+}
