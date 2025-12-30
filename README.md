@@ -10,7 +10,7 @@ A powerful Discord plugin that generates intelligent conversation summaries with
 
 **Installation URL:**
 ```
-https://shalyss.github.io/shelter-plugins/gemini-summarize/plugin.js
+https://shalyss.github.io/shelter-plugins/gemini-summarize
 ```
 
 **Features:**
