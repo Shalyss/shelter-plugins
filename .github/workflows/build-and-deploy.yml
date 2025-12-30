@@ -37,7 +37,7 @@ jobs:
       - name: Copy additional files
         run: |
           cp -r static/* dist 2>/dev/null || true
-          cp README.md dist/README.md
+          cp README.md dist/index.md
           printf -- "---\npermalink: /404.html\n---\n" > dist/404.md
           printf -- "> **Note:** You may have clicked a plugin link. Copy the link address and add it to Shelter.\n\n" >> dist/404.md
           printf -- "# Shelter Plugins\n\n" >> dist/404.md
