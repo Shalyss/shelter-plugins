@@ -1,4 +1,4 @@
-name: Build and Deploy Plugin
+name: Build and Deploy
 
 on:
   push:
@@ -31,32 +31,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build plugin
-        run: pnpm run build
+      - name: Build plugins
+        run: pnpm lune ci
 
-      - name: Prepare dist for GitHub Pages
+      - name: Copy additional files
         run: |
-          mkdir -p dist
-          # Copy built plugin files from all plugins
-          for plugin in plugins/*/; do
-            if [ -d "${plugin}dist" ]; then
-              plugin_name=$(basename "$plugin")
-              echo "Copying ${plugin_name} plugin..."
-              mkdir -p "dist/${plugin_name}"
-              cp -r "${plugin}dist/"* "dist/${plugin_name}/"
-            fi
-          done
-          # Copy README for GitHub Pages
+          cp -r static/* dist 2>/dev/null || true
           cp README.md dist/README.md
-          # Create 404 page with plugin installation instructions
           printf -- "---\npermalink: /404.html\n---\n" > dist/404.md
           printf -- "> **Note:** You may have clicked a plugin link. Copy the link address and add it to Shelter.\n\n" >> dist/404.md
           printf -- "# Shelter Plugins\n\n" >> dist/404.md
           cat README.md >> dist/404.md
-          # Create Jekyll config
-          printf -- "remote_theme: pages-themes/cayman\n" > dist/_config.yml
-          printf -- "title: Shelter Plugins\n" >> dist/_config.yml
-          printf -- "description: Collection of Shelter plugins for Discord clients\n" >> dist/_config.yml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
