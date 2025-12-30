@@ -30,8 +30,10 @@ jobs:
       - name: Copy additional files
         run: |
           cp -r static/* dist 2>/dev/null || true
-          cp README.md dist/index.md
-          touch dist/.nojekyll
+          # Add Jekyll front matter to index.md
+          printf -- "---\nlayout: default\n---\n" > dist/index.md
+          cat README.md >> dist/index.md
+          # Create 404 page
           printf -- "---\npermalink: /404.html\n---\n" > dist/404.md
           printf -- "> **Note:** You accessed a link that returned a 404, probably by clicking one of the plugin links. You're supposed to copy the link address and add it into shelter.\n\n" >> dist/404.md
           cat README.md >> dist/404.md
