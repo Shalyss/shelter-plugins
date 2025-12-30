@@ -49,7 +49,7 @@ The group is enthusiastic about Helldivers 2. @alice asked for opinions and ever
 3. Click **"Add Plugin"** or paste the plugin URL
 4. Enter the following URL:
    ```
-   https://shalyss.github.io/shelter-plugins/gemini-summarize
+   https://shalyss.github.io/shelter-plugins/gemini-summarize/plugin.js
    ```
 5. The plugin will automatically download and install
 6. Enable the plugin in the Shelter plugins list
