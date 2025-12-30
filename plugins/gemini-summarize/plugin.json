@@ -2,5 +2,6 @@
     "name": "Gemini Integration",
     "description": "Integrate Google Gemini AI for intelligent Discord conversation summaries with context-aware display names, role colors, and multilingual support (8 languages).",
     "author": "Shalyss",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "hash": "<HASH_PLACEHOLDER>"
 }
